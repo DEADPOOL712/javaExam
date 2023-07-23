@@ -11,6 +11,12 @@ import java.io.FileReader;
 class customExc extends Exception {
 }
 
+class Test {
+    public void pr(int arr[]) {
+        System.out.println(arr[0]);
+    }
+}
+
 public class App {
     public static void main(String[] args) throws Exception { // ignore all checked exception
         System.out.println("Hello, World!");
