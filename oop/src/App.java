@@ -1,3 +1,4 @@
+import java.rmi.server.UID;
 
 class Person {
     int age;
@@ -137,6 +138,41 @@ class combine implements Q {
 
 }
 
+// Wrapper class
+// Use for creating ojb of premitive type
+// use for converting one type to another type
+// numbers of method are available in wrapper class
+// Interger,Double,String,Folat,
+class WrapperDemo {
+    void convert() {
+        // int x = 10;
+        // String result = Integer.toString(x); // toString to convert into String
+        // String result = String.valueOf(x);
+        String operand = "234";
+        int num = Integer.valueOf(operand);
+        System.out.println(num);
+    }
+}
+
+// String buffer & String Builder
+// String buffer -> theread safe
+// String builder -> not thread safe
+
+class BufferBuilder {
+    // demo of buffer and builder
+    void ExBuffer() {
+        StringBuffer sbf = new StringBuffer("Hello");
+        sbf.setLength(1);
+        System.out.println(sbf);
+    }
+
+    void ExBuilder() {
+        StringBuilder sbi = new StringBuilder("Hello");
+        sbi.setLength(1);
+        System.out.println(sbi);
+    }
+}
+
 public class App {
     public static void main(String[] args) throws Exception {
         // copy constructor
@@ -155,7 +191,11 @@ public class App {
         // System.out.println(b1.getter_holder());
         // System.out.println(b1.getter_balance());
 
-        combine c = new combine();
+        // WrapperDemo wd = new WrapperDemo();
+        // wd.convert();
+        BufferBuilder bb = new BufferBuilder();
+        bb.ExBuffer();
+        bb.ExBuilder();
 
     }
 }

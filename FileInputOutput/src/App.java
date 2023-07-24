@@ -1,4 +1,6 @@
+import java.io.BufferedInputStream;
 import java.util.*;
+import java.io.*;
 
 //! generic class
 class Printer<T> {
@@ -14,7 +16,6 @@ class Printer<T> {
         s.shout(thingsToPrint, "HEYYY"); // anything will be fine here int,double,string
 
     }
-
 }
 
 // ! generic method
@@ -42,28 +43,28 @@ public class App {
         Printer<Integer> ip = new Printer<>(5);
         Printer<String> sp = new Printer<>("Hellow");
         Printer<Double> dp = new Printer<>(123.33);
-        dp.display();
-        sp.display();
-        ip.display();
+        // dp.display();
+        // sp.display();
+        // ip.display();
 
         // wild card demo
         List<Integer> il = new ArrayList<>();
         WildCard wc = new WildCard();
         il.add(123);
         il.add(33);
-        wc.printList(il);
+        // wc.printList(il);
 
-        // ! File calss -> for creating , deleting , searching file
+        // * File calss -> for creating , deleting , searching file
         // File fl = new File("index.txt");
         // System.out.println(fl.getName());
         // System.out.println(fl.getAbsolutePath());
         // System.out.println(fl.length()); // in bytes
 
         // Steam -> seq of data in or out
-        // two types -> 1)Bytes 2)Character
-        // ! Byte stream -> read/write in binary
-        // ! DataInputStream / DataOutputStream -> primitive data (subclass)
-        // ! BufferdInputStream / BufferdOutputStream -> use buffer (subclass)
+        // * two types -> 1)Bytes 2)Character
+        // * Byte stream -> read/write in binary
+        // * DataInputStream / DataOutputStream -> primitive data (subclass)
+        // * BufferedInputStream / BufferedOutputStream -> use buffer (subclass)
         // write into bytes formate
         // FileOutputStream fout = new FileOutputStream("abc.txt");
         // String name = "vaibhav";
@@ -78,8 +79,8 @@ public class App {
         // }
         // fin.close();
 
-        // ! Character Stream -> read/write in character
-        // ! Reader / Writer are base class of all below methods
+        // * Character Stream -> read/write in character
+        // * Reader / Writer are base class of all below methods
         // ================================================//
         // Reader reader = new FileReader("xyz.txt"); // will not create file
         // reader.read() -> will read only one byte
